@@ -60,7 +60,7 @@ public class Bibliothèque {
         }
     }
     
-    /* 
+    
     public void afficherDocumentsParType(String pType) {
         for (int i = 0; i < this.nbDocuments; i++) {
             if (this.documents[i].getClass().getSimpleName().equals(pType)) {
@@ -95,8 +95,33 @@ public class Bibliothèque {
         for (int i = 0; i < this.nbDocuments; i++) {
             if (this.documents[i] instanceof Manuel) {
                 Manuel m = (Manuel) this.documents[i];
-            }
+                if (m.getNiveauScolaire() == pNiveauScolaire) {
+                    System.out.println(this.documents[i]);
+                }
 
-}
-}*/
+            }
+        }
+    }
+    
+    //affichage par numeroEnrégistrement
+    public void afficherDocumentsParNumeroEnregistrement(int pNumeroEnregistrement) {
+        for (int i = 0; i < this.nbDocuments; i++) {
+            if (this.documents[i] instanceof Revue) {
+                Revue r = (Revue) this.documents[i];
+                if (r.getNumeroEnregistrement() == pNumeroEnregistrement) {
+                    System.out.println(this.documents[i]);
+                }
+            }
+        }
+
+    }
+    //affichage tous les auteurs
+    public void afficherTousLesAuteurs() {
+        for (int i = 0; i < this.nbDocuments; i++) {
+            if (this.documents[i] instanceof Livre) {
+                Livre l = (Livre) this.documents[i];
+                System.out.println(l.getAuteur());
+            }
+        }
+    }
 }

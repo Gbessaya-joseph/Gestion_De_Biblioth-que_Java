@@ -9,12 +9,15 @@ public class Revue extends Document {
 		this.mois = pMois;
 		this.annee = pAnnee;
 	}
+	
+	
 
 	@Override
 	public String toString() {
-		return super.toString() + "mois=" + mois + ", annee=" + annee;
+		return "Revue [ Numero d enregistrement " + numeroEnregistrement+ ", Titre " + titre + " Date parution "+mois+"-"+annee+"]";
 	}
 
+	
 
 	/**
 	 * @return the mois
